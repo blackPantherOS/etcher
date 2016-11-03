@@ -27,6 +27,36 @@ Installers
 Refer to the [downloads page][etcher] for the latest pre-made
 installers for all supported operating systems.
 
+#### Debian Repository
+
+- Save the following as `/etc/apt/sources.list.d/etcher.list`:
+
+```
+deb https://dl.bintray.com/resin-io/debian stable etcher
+```
+
+- Trust Bintray.com's GPG key:
+
+```
+sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 379CE192D401AB61
+```
+
+- Update and install:
+
+```
+sudo apt-get update
+sudo apt-get install etcher-electron
+```
+
+#### Brew Cask
+
+Notice the Etcher Cask has to be updated manually to point to new versions, so
+it might not refer to the latest version right after an Etcher release.
+
+```sh
+brew cask install etcher
+```
+
 Support
 -------
 
